@@ -11,6 +11,6 @@ class NewsLetter extends Model
         'email',
         'name',
         'status'
-        
-    ]
+
+    ];
 }
