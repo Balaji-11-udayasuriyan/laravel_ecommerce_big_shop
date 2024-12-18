@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-use App\Enums\DiscountType;
+use App\Enums\DiscountTypeStatus;
 
 return new class extends Migration
 {
@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('start_date');
             $table->string('end_date')->nullable();
-            $table->string('type')->default(DiscountType::COUPON_CODE)->nullable();
+            $table->string('type')->default(DiscountTypeStatus::COUPON_CODE)->nullable();
             $table->boolean('never_expired')->default(false)->nullable();
             $table->timestamps();
         });
