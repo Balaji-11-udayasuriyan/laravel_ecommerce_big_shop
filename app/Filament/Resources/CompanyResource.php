@@ -31,9 +31,8 @@ class CompanyResource extends Resource
                 Forms\Components\TextInput::make('address')
                     ->maxLength(255)
                     ->default(null),
-                Forms\Components\TextInput::make('user_id')
-                    ->numeric()
-                    ->default(null),
+                Forms\Components\Select::make('user_id')
+                    ->relationship('user','name'),
             ]);
     }
 
